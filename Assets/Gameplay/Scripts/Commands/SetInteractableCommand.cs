@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Gameplay.Commands
 {
-    [CommandInfo("Gameplay", "Set Active Interactable", "Enable or disable player movement.")]
+    [CommandInfo("Gameplay", "Activar o desactivar interacción", "Activa o desactiva una interacción en específico.")]
     public class SetInteractableCommand : Command
     {
         [SerializeField] private bool isEnabled = true;

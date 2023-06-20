@@ -1,18 +1,32 @@
 ﻿using System;
+using Gameplay.Events;
 using UnityEngine;
 
 namespace Gameplay.MissionsAndClues
 {
-    [Serializable]
-    public class Clue
+    [CreateAssetMenu(menuName="Xantaf3/Clue")]
+    public class Clue : ScriptableObject
     {
-        [SerializeField] private string key = default;
-        [SerializeField] private string name = default;
+        public event Action Updated;
+        
+        [SerializeField] private string clueName = default;
+        [SerializeField] private string clueDescription = default;
 
-        public string Key => key;
-        public string Name => name;
+        public string Name => clueName;
+        public string Description => clueDescription;
         public bool IsFound { get; private set; }
 
-        public void Found() => IsFound = true;
+        private void OnEnable()
+        {
+            IsFound = false;
+        }
+
+        public void Found()
+        {
+            if (IsFound)
+                return;
+            IsFound = true;
+            Updated?.Invoke();
+        }
     }
 }

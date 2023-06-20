@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Gameplay.Events;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Gameplay.Player
@@ -9,6 +10,8 @@ namespace Gameplay.Player
         [SerializeField] private float checkRate = 0.2F;
         [SerializeField] private float interactionDistance = 1.0F;
         [SerializeField] private float maxInteractionDistance = 4.5F;
+        [Header("Events")] 
+        [SerializeField] private GameEvent warningEvent = default;
 
         private float nextCheck = 0;
         private Interactable possibleInteractable = null;
@@ -46,7 +49,7 @@ namespace Gameplay.Player
                 else if (distance <= maxInteractionDistance)
                     playerMovement.MoveAutomaticTo(possibleInteractable.transform.position, () => possibleInteractable.Interact());
                 else
-                    Debug.LogWarning("El interactable esta muy lejos.");
+                    warningEvent.RaiseEvent(this, "Estoy muy lejos para interactuar...");
             }
         }
 

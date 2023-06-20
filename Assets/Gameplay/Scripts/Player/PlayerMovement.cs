@@ -25,6 +25,7 @@ namespace Gameplay.Player
         public Vector2 MovementInput { get; set; }
         public bool IsMovingAutomatic { get; private set; }
         public bool IsDisabledByFungus { get; set; }
+        public bool IsTeleporting { get; private set; }
         public float Velocity => IsMovingAutomatic ? agent.velocity.magnitude : controllerVelocity;
     
         private void Awake()
@@ -37,6 +38,12 @@ namespace Gameplay.Player
 
         private void Update()
         {
+            if (IsTeleporting)
+            {
+                MovementInput = Vector2.zero;
+                controllerVelocity = 0;
+                return;
+            }
             agent.isStopped = !IsMovingAutomatic;
             if (IsMovingAutomatic)
             {
@@ -46,6 +53,8 @@ namespace Gameplay.Player
                 onDestinationReached?.Invoke();
                 onDestinationReached = null;
             }
+            if (IsDisabledByFungus)
+                MovementInput = Vector2.zero;
             Vector3 moveDirection = (CameraTransform.right * MovementInput.x) + (CameraTransform.forward * MovementInput.y);
             moveDirection.y = 0;
             moveDirection.Normalize();
@@ -84,5 +93,16 @@ namespace Gameplay.Player
             onDestinationReached = null;
             IsMovingAutomatic = false;
         }
+
+        public void StartTeleport(float teleportDuration)
+        {
+            if (IsTeleporting)
+                return;
+            StopAutomaticMovement();
+            IsTeleporting = true;
+            Invoke(nameof(FinishTeleport), teleportDuration);
+        }
+
+        private void FinishTeleport() => IsTeleporting = false;
     }
 }
