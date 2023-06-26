@@ -15,7 +15,7 @@ namespace Gameplay.Commands
         {
             clue.Found();
             if (logEvent != null)
-                logEvent.RaiseEvent(null, $"Se encontro la pista {clue.Name}!");
+                logEvent.RaiseEvent(null, $"Encontraste {clue.Name}!");
             Continue();
         }
     }
