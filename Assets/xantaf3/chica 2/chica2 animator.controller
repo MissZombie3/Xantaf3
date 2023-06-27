@@ -21,7 +21,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -7067349410769108049, guid: 4edaae4ce0b0d2d40bcb6c8c9519f8d8, type: 3}
+  m_Motion: {fileID: -7067349410769108049, guid: 4edaae4ce0b0d2d40bcb6c8c9519f8d8,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -48,7 +49,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7330462576060822083, guid: 894dcdd42b0847741b1e79beebb2e93f, type: 3}
+  m_Motion: {fileID: 7330462576060822083, guid: 894dcdd42b0847741b1e79beebb2e93f,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -75,7 +77,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -3531336086677259835, guid: 8ecf3394381e9d1478200a285d116d72, type: 3}
+  m_Motion: {fileID: -3531336086677259835, guid: 8ecf3394381e9d1478200a285d116d72,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -202,7 +205,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -3531336086677259835, guid: 8ecf3394381e9d1478200a285d116d72, type: 3}
+  m_Motion: {fileID: -3531336086677259835, guid: 8ecf3394381e9d1478200a285d116d72,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -252,6 +256,28 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1101 &2309778965340247547
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -9020451123056518526}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.991119
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1101 &6741061785505512695
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -284,7 +310,8 @@ AnimatorState:
   m_Name: stand-talk_251115 0
   m_Speed: -1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 2309778965340247547}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -294,7 +321,8 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -7067349410769108049, guid: 4edaae4ce0b0d2d40bcb6c8c9519f8d8, type: 3}
+  m_Motion: {fileID: -7067349410769108049, guid: 4edaae4ce0b0d2d40bcb6c8c9519f8d8,
+    type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

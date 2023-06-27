@@ -63,7 +63,7 @@ MonoBehaviour:
   errorContainer: {fileID: 3865807441267048338}
   errorText: {fileID: 9114664434697498225}
   showDuration: 0.25
-  inScreenDuration: 1.5
+  inScreenDuration: 2.5
   hideDuration: 0.25
 --- !u!114 &1038819754476878143
 MonoBehaviour:
