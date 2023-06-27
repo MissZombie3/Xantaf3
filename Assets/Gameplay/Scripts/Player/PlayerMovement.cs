@@ -47,8 +47,16 @@ namespace Gameplay.Player
             agent.isStopped = !IsMovingAutomatic;
             if (IsMovingAutomatic)
             {
-                if (agent.remainingDistance > 0.9F)
+                Vector3 targetDestination = agent.destination;
+                targetDestination.y = 0;
+                Vector3 playerPos = transform.position;
+                playerPos.y = 0;
+
+                if (Vector3.Distance(playerPos, targetDestination) > 0.9F)
                     return;
+
+                //if (agent.remainingDistance > 0.9F)
+                //    return;
                 IsMovingAutomatic = false;
                 onDestinationReached?.Invoke();
                 onDestinationReached = null;

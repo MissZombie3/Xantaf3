@@ -43,7 +43,9 @@ namespace Gameplay.Player
                 Vector3 interactablePosition = possibleInteractable.transform.position;
                 interactablePosition.y = 0;
                 float distance = Vector3.Distance(myPosition, interactablePosition);
-            
+
+                Debug.Log("DISTANCIAAAAAAA: " + distance);
+
                 if (distance <= interactionDistance)
                     possibleInteractable.Interact();
                 else if (distance <= maxInteractionDistance)
