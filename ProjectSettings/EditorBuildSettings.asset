@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/_Main/Scenes/Menu.unity
     guid: 0db189a36cc47cd499d8b3bd977273af
   - enabled: 1
-    path: Assets/_Main/Scenes/Level_1.unity
-    guid: 956d3a2e3bf09f04faab7ac585a67ad8
+    path: Assets/_Main/Scenes/Xantaf3Demo.unity
+    guid: ce7386d0411cb6c44b232c45ed4e5ea1
   m_configObjects: {}
