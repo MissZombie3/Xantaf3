@@ -11,10 +11,12 @@ namespace Gameplay.MissionsAndClues
         
         [SerializeField] private string clueName = default;
         [SerializeField] private string clueDescription = default;
+        [SerializeField] private Sprite icon = default;
 
         public string Name => clueName;
         public string Description => clueDescription;
         public bool IsFound { get; private set; }
+        public Sprite Sprite => icon;
 
         private void OnEnable()
         {

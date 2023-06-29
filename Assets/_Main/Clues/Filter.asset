@@ -15,3 +15,4 @@ MonoBehaviour:
   clueName: Filtro de lenguaje
   clueDescription: El filtro de lenguaje tiene la capacidad de traducir todos los
     idiomas conocidos.
+  icon: {fileID: 21300000, guid: 7e70c14075e99c54ea20f9159ff1e575, type: 3}

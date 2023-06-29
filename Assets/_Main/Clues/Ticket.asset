@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueName: Factura de Hiperaceite
   clueDescription: Es una factura de compra en Hiperaceite, de hace dos horas
+  icon: {fileID: 21300000, guid: 90fe8b02667bb18478261526c50cce71, type: 3}

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clueName: 'Partituras '
   clueDescription: Partituras musicales.
+  icon: {fileID: 21300000, guid: 43451fb1c62cc0e47938c8585302e3e4, type: 3}

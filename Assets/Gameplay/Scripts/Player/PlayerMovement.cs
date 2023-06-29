@@ -19,6 +19,7 @@ namespace Gameplay.Player
         private CharacterController controller;
         private NavMeshAgent agent;
         private Action onDestinationReached;
+        private UICluePopup cluesPopup;
 
         private Transform CameraTransform { get; set; }
     
@@ -30,6 +31,7 @@ namespace Gameplay.Player
     
         private void Awake()
         {
+            cluesPopup = FindObjectOfType<UICluePopup>();
             controller = GetComponent<CharacterController>();
             agent = GetComponent<NavMeshAgent>();
             agent.isStopped = true;
@@ -61,7 +63,7 @@ namespace Gameplay.Player
                 onDestinationReached?.Invoke();
                 onDestinationReached = null;
             }
-            if (IsDisabledByFungus)
+            if (IsDisabledByFungus || cluesPopup.IsVisible)
                 MovementInput = Vector2.zero;
             Vector3 moveDirection = (CameraTransform.right * MovementInput.x) + (CameraTransform.forward * MovementInput.y);
             moveDirection.y = 0;
